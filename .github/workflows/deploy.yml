@@ -5,7 +5,7 @@ on:
     paths:
       - prisma/migrations/** # Run this workflow when migrations are updated
     branches:
-      - main/coctailNotesApp
+      - main
   workflow_dispatch: # Allow manual triggering from GitHub Actions UI
 
 jobs:
