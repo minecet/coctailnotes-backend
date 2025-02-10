@@ -43,3 +43,31 @@ model Author {
 
   books Book[]
 }
+
+model Cocktail {
+  id            Int    @id @default(autoincrement())
+  title         String
+  difficulty    String
+  portion       String
+  time          String
+  description   String
+  ingredients1  String
+  ingredients2  String
+  ingredients3  String
+  ingredients4  String
+  ingredients5  String
+  ingredients6  String
+  ingredients7  String
+  ingredients8  String
+  ingredients9  String
+  ingredients10 String
+  ingredients11 String
+  ingredients12 String
+  image         String
+  Step1         String
+  Step2         String
+  Step3         String
+  Step4         String
+  Step5         String
+  Step6         String
+}
