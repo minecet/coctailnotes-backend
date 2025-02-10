@@ -75,7 +75,7 @@ model Cocktail {
 model User {
   id             String   @id @default(uuid())
   username       String   @unique
-  password       String
+  passwordHash   String
   email          String   @unique
   firstName      String
   surname        String
