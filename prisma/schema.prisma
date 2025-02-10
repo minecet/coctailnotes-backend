@@ -71,3 +71,16 @@ model Cocktail {
   Step5         String
   Step6         String
 }
+
+model User {
+  id             String   @id @default(uuid())
+  username       String   @unique
+  password       String
+  email          String   @unique
+  firstName      String
+  surname        String
+  bioDescription String?
+  profilePicture String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
