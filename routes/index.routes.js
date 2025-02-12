@@ -14,4 +14,7 @@ router.use('/authors', authorsRoutes)
 const usersRoutes = require("./users.routes");
 router.use("/users", usersRoutes);
 
+const cocktailsRoutes = require("./cocktails.routes");
+router.use("/cocktails", cocktailsRoutes);
+
 module.exports = router
