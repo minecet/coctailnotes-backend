@@ -17,4 +17,7 @@ router.use("/users", usersRoutes);
 const cocktailsRoutes = require("./cocktails.routes");
 router.use("/cocktails", cocktailsRoutes);
 
+const notesRoutes = require("./notes.routes");
+router.use("/notes", notesRoutes);
+
 module.exports = router

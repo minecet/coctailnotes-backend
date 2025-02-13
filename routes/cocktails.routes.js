@@ -61,9 +61,11 @@ router.get("/", async (req, res) => {
   });
   
   router.get("/:cocktailId", async (req, res) => {
+    const { cocktailId } = req.params;
+    const id =  Number(cocktailId)
     try {
       const cocktail = await prisma.cocktail.findUnique({
-        where: { id: req.params.cocktailId },
+        where: { id: id },
       });
   
       if (!cocktail) {

@@ -44,6 +44,19 @@ model Author {
   books Book[]
 }
 
+model Note {
+  id        String   @id @default(uuid())
+  content   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id])
+
+  cocktailId Int
+  cocktail   Cocktail @relation(fields: [cocktailId], references: [id])
+}
+
 model Cocktail {
   id            Int    @id @default(autoincrement())
   title         String
@@ -70,6 +83,7 @@ model Cocktail {
   Step4         String
   Step5         String
   Step6         String
+  notes         Note[]
 }
 
 model User {
@@ -83,4 +97,5 @@ model User {
   profilePicture String?
   createdAt      DateTime @default(now())
   updatedAt      DateTime @updatedAt
+  notes          Note[]
 }
